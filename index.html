@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Malik Digital Hub — online applications, education support, CV design, document services and digital solutions across Pakistan.">
+<title>Malik Digital Hub | One Platform, All Digital Services</title>
+<style>
+:root{--navy:#102b50;--blue:#1e6091;--gold:#d8b15e;--ink:#172b43;--muted:#64748b;--paper:#f5f8fc;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 4px 18px #071b3330}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
+.logo{width:44px;height:44px;border-radius:13px;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-size:24px;font-weight:900}
+.brand small{display:block;color:#e9d39f;font-size:10px;letter-spacing:1.5px}
+nav{display:flex;gap:20px;align-items:center;font-size:14px}nav a:hover{color:var(--gold)}
+.menu{display:none;background:transparent;border:1px solid #ffffff55;color:#fff;border-radius:8px;padding:8px 12px}
+.hero{background:linear-gradient(120deg,#102b50,#174c75);color:white;padding:76px 0 68px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:360px;height:360px;border:1px solid #ffffff20;border-radius:50%;right:-100px;top:-130px;box-shadow:0 0 0 40px #ffffff08,0 0 0 80px #ffffff05}
+.eyebrow{color:#f0d28e;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}
+h1{font-size:clamp(36px,6vw,62px);line-height:1.08;margin:14px 0 18px;max-width:760px}
+.hero p{max-width:650px;color:#e2eaf3;font-size:18px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;font-weight:700;border:1px solid transparent;cursor:pointer}
+.btn.gold{background:var(--gold);color:var(--navy)}.btn.outline{border-color:#ffffff80;color:#fff}.btn.blue{background:var(--navy);color:#fff}
+section{padding:62px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 32px}.section-head h2{font-size:32px;margin:0 0 8px;color:var(--navy)}.section-head p{color:var(--muted);margin:0}
+.searchbar{max-width:560px;margin:22px auto 0;display:flex;gap:8px}.searchbar input{width:100%;padding:13px 15px;border:1px solid #d8e0eb;border-radius:10px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid #e1e8f0;border-radius:16px;padding:22px;background:#fff;box-shadow:0 8px 24px #102b5009;display:flex;flex-direction:column;min-height:220px}
+.icon{width:48px;height:48px;border-radius:13px;background:#f8f0df;color:#9a7229;display:grid;place-items:center;font-size:24px}
+.card h3{margin:14px 0 6px;color:var(--navy);font-size:19px}.card p{color:var(--muted);font-size:14px;margin:0 0 18px;flex:1}.card a{color:#1e6091;font-weight:700;font-size:14px}
+.band{background:var(--paper)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#fff;border-radius:14px;padding:22px;border:1px solid #e1e8f0}.num{color:#a47c32;font-weight:900;font-size:13px;letter-spacing:1px}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}.about h2{font-size:32px;color:var(--navy);line-height:1.2}.about p{color:var(--muted)}.aboutbox{background:var(--navy);color:#fff;border-radius:18px;padding:28px}.aboutbox strong{color:var(--gold)}
+.contact{background:var(--navy);color:#fff}.contact .section-head h2{color:#fff}.contact .section-head p{color:#d4dfeb}.contactbox{max-width:760px;margin:auto;text-align:center;border:1px solid #ffffff30;border-radius:18px;padding:30px}.contactbox p{color:#d4dfeb}
+footer{background:#0a1d35;color:#cbd5e1;padding:24px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.notice{font-size:12px;color:#64748b;margin-top:22px}
+.hidden{display:none!important}
+@media(max-width:800px){nav{display:none;position:absolute;top:70px;left:4%;right:4%;background:#102b50;padding:18px;border-radius:12px;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}}
+@media(max-width:540px){.grid,.steps{grid-template-columns:1fr}.hero{padding:58px 0}.hero p{font-size:16px}.section-head h2,.about h2{font-size:27px}.searchbar{flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#home"><span class="logo">M</span><span>MALIK DIGITAL HUB<small>ONE PLATFORM • ALL DIGITAL SERVICES</small></span></a>
+  <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
+  <nav id="nav"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#how">How It Works</a><a href="#contact">Contact</a></nav>
+ </div>
+</header>
+<main>
+<section class="hero" id="home"><div class="wrap">
+ <div class="eyebrow">Digital services across Pakistan</div>
+ <h1>Everything Digital,<br><span style="color:#f0d28e">One Place.</span></h1>
+ <p>Your convenient place for online application assistance, education support, CV designing, document services and selected digital products.</p>
+ <div class="actions"><a class="btn gold" href="#services">Explore Services</a><a class="btn outline" href="https://wa.me/923458685744?text=Assalam-o-Alaikum%2C%20I%20want%20to%20ask%20about%20your%20services." target="_blank" rel="noopener">WhatsApp Us</a></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+ <div class="section-head"><h2>Our Services</h2><p>Choose a category and contact us for requirements, availability and current charges.</p>
+  <div class="searchbar"><input id="serviceSearch" type="search" placeholder="Search a service, e.g. CV, AIOU, job..."></div>
+ </div>
+ <div class="grid" id="serviceGrid">
+  <article class="card" data-key="aiou education admission assignments study material degree certificate cms"><div class="icon">🎓</div><h3>Education & AIOU Support</h3><p>Admission guidance, study resources, solved-practice support, degree and certificate application guidance, and CMS request assistance.</p><a href="https://wa.me/923458685744?text=I%20need%20Education%20%2F%20AIOU%20service%20information." target="_blank" rel="noopener">Enquire on WhatsApp →</a></article>
+  <article class="card" data-key="jobs online applications government private forms admissions scholarships"><div class="icon">💼</div><h3>Jobs & Online Applications</h3><p>Application form filling assistance for jobs, admissions, scholarships and other online opportunities.</p><a href="https://wa.me/923458685744?text=I%20need%20Jobs%20%2F%20Online%20Application%20assistance." target="_blank" rel="noopener">Enquire on WhatsApp →</a></article>
+  <article class="card" data-key="government public services license verification e stamp stamp"><div class="icon">🏛️</div><h3>Government & Public Services</h3><p>Guidance and facilitation for eligible e-stamp, license application and online verification processes.</p><a href="https://wa.me/923458685744?text=I%20need%20Government%20%2F%20Public%20Service%20assistance." target="_blank" rel="noopener">Enquire on WhatsApp →</a></article>
+  <article class="card" data-key="cv resume designing biodata"><div class="icon">📄</div><h3>CV & Resume Designing</h3><p>Professional CV, resume and biodata formatting for job applications.</p><a href="https://wa.me/923458685744?text=I%20need%20CV%20%2F%20Resume%20designing." target="_blank" rel="noopener">Enquire on WhatsApp →</a></article>
+  <article class="card" data-key="documents pdf scanning formatting passport photo editing"><div class="icon">🗂️</div><h3>Document & PDF Services</h3><p>Document scanning, PDF formatting, typing, file conversion and passport-size photo preparation.</p><a href="https://wa.me/923458685744?text=I%20need%20Document%20%2F%20PDF%20service%20information." target="_blank" rel="noopener">Enquire on WhatsApp →</a></article>
+  <article class="card" data-key="loan applications financing assistance"><div class="icon">💳</div><h3>Loan Application Assistance</h3><p>General application guidance and form-filling support. Approval and eligibility are decided only by the relevant provider.</p><a href="https://wa.me/923458685744?text=I%20need%20Loan%20Application%20assistance." target="_blank" rel="noopener">Enquire on WhatsApp →</a></article>
+  <article class="card" data-key="products shopping earbuds power bank accessories"><div class="icon">🛍️</div><h3>Digital Products & Accessories</h3><p>Ask about available earbuds, power banks and selected mobile accessories. Availability and delivery charges are confirmed before order.</p><a href="https://wa.me/923458685744?text=I%20want%20to%20see%20available%20products." target="_blank" rel="noopener">Enquire on WhatsApp →</a></article>
+  <article class="card" data-key="typing printing online forms general assistance"><div class="icon">⌨️</div><h3>Typing & Form Assistance</h3><p>Typing, data entry, online form guidance and general digital documentation support.</p><a href="https://wa.me/923458685744?text=I%20need%20Typing%20%2F%20Form%20assistance." target="_blank" rel="noopener">Enquire on WhatsApp →</a></article>
+  <article class="card" data-key="contact custom other services"><div class="icon">✨</div><h3>Other Digital Solutions</h3><p>Have a different online or documentation requirement? Contact us and tell us what you need.</p><a href="https://wa.me/923458685744?text=I%20have%20a%20custom%20service%20request." target="_blank" rel="noopener">Enquire on WhatsApp →</a></article>
+ </div><p id="noResults" class="notice hidden">No matching service found. Please contact us for help.</p>
+</div></section>
+
+<section class="band" id="how"><div class="wrap"><div class="section-head"><h2>How It Works</h2><p>A simple process to get started from anywhere in Pakistan.</p></div>
+ <div class="steps"><div class="step"><div class="num">01 / SELECT</div><h3>Choose a Service</h3><p>Browse the service categories and decide what assistance you need.</p></div><div class="step"><div class="num">02 / CONTACT</div><h3>Send an Inquiry</h3><p>Message us on WhatsApp to confirm requirements, availability, charges and timelines.</p></div><div class="step"><div class="num">03 / COMPLETE</div><h3>Get Assistance</h3><p>Share only the necessary information through an agreed, secure channel and receive an update.</p></div></div>
+</div></section>
+
+<section id="about"><div class="wrap about"><div><div class="eyebrow">About us</div><h2>Practical digital help, made easier.</h2><p>Malik Digital Hub aims to make common digital, educational and documentation services easier to access for customers across Pakistan. We focus on clear communication, transparent charges and responsible handling of customer information.</p><p>For every request, customers can confirm the service scope, required documents, fee and expected completion time before proceeding.</p></div><div class="aboutbox"><h3>Why contact us?</h3><p>✓ Clear service information</p><p>✓ WhatsApp-based inquiries</p><p>✓ Support for customers across Pakistan</p><p>✓ Charges confirmed before work starts</p><p><strong>Malik Digital Hub</strong><br>One Platform • All Digital Services</p></div></div></section>
+
+<section class="contact" id="contact"><div class="wrap"><div class="section-head"><h2>Let’s Get Started</h2><p>Tell us which service you need. We’ll share the next steps and current charges.</p></div><div class="contactbox"><h3>Contact Malik Digital Hub</h3><p>WhatsApp inquiries and service information</p><a class="btn gold" href="https://wa.me/923458685744?text=Assalam-o-Alaikum%2C%20I%20want%20to%20contact%20Malik%20Digital%20Hub." target="_blank" rel="noopener">Chat on WhatsApp</a><p class="notice" style="color:#d4dfeb">WhatsApp: 0345 8685744</p></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Malik Digital Hub. All rights reserved.</span><span>One Platform • All Digital Services</span></div><div class="wrap notice" style="color:#9eacbd">Independent service provider. Not affiliated with any government department, AIOU, bank or public authority. Official decisions, approvals, fees and processing times are determined by the relevant institution. Never send passwords, OTPs or unnecessary sensitive documents.</div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('nav').classList.toggle('open'));
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+const search=document.getElementById('serviceSearch'), cards=[...document.querySelectorAll('.card')], no=document.getElementById('noResults');
+search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let shown=0;cards.forEach(c=>{const ok=(c.innerText+' '+c.dataset.key).toLowerCase().includes(q);c.classList.toggle('hidden',!ok);if(ok)shown++});no.classList.toggle('hidden',shown!==0)});
+</script>
+</body></html>
